@@ -1,3 +1,5 @@
+#pragma once
+
 struct Point {
 public:
 	float X = 0;

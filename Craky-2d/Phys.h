@@ -1,3 +1,4 @@
+#pragma once
 #include "Shape.h"
 
 const float Gravity = -9.81;
@@ -22,6 +23,5 @@ public:
 
 	void PerfromTick();
 
-	PhysObj(unsigned int t_count) : Shape(t_count) {
-	}
+	PhysObj(unsigned int t_count) : Shape(t_count) { }
 };
