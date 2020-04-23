@@ -13,6 +13,8 @@ public:
 
 class Triangle {
 public:
+	Point* Center;
+
 	Point* Vertexes[3];
 
 	Point* CollidesWith(Triangle* Other);
@@ -21,18 +23,23 @@ public:
 
 	void ShiftPoints(float dX, float dY);
 
+	void CalculateCenter();
+
 	bool ValueBetween(float V, float B1, float B2);
 };
 
 class Shape {
 public:
+	Point* Center;
 	Triangle** Triangles;
-	unsigned int tri_count = 0;
+	int tri_count = 0;
 
 	Shape(unsigned int t_count) {
 		tri_count = t_count;
 		Triangles = new Triangle*[tri_count];
 	}
+
+	void CalculateCenter();
 
 	void ShiftShape(float dX, float dY);
 

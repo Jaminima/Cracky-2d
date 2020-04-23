@@ -32,6 +32,11 @@ void Triangle::ShiftPoints(float dX, float dY) {
 	}
 }
 
+void Triangle::CalculateCenter() {
+	Center = new Point((Vertexes[0]->X + Vertexes[1]->X + Vertexes[2]->X) / 3,
+		(Vertexes[0]->Y + Vertexes[1]->Y + Vertexes[2]->Y) / 3);
+}
+
 bool Triangle::ValueBetween(float V, float B1, float B2) {
 	if (B2 > B1) return V <= B2&& B1 <= V;
 	return V <= B1 && B2 <= V;

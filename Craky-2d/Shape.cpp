@@ -13,3 +13,13 @@ Point* Shape::CollidesWith(Shape* Other) {
 	}
 	return P;
 }
+
+void Shape::CalculateCenter() {
+	int X = 0;
+	int Y = 0;
+	for (int i = 0; i < tri_count; i++) {
+		X += Triangles[i]->Center->X;
+		Y += Triangles[i]->Center->Y;
+	}
+	Center = new Point(X / tri_count, Y / tri_count);
+}

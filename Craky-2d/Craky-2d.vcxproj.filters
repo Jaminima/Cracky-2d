@@ -19,14 +19,14 @@
     <Filter Include="Header Files\Glut">
       <UniqueIdentifier>{18e861bd-5bff-4338-8dd8-99c3ef280a52}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Graphics">
-      <UniqueIdentifier>{9eaa3455-63c0-40f7-81ac-7565adbe97f2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Shape">
       <UniqueIdentifier>{7b9b2bcf-cff4-41bd-bfa0-c55cf157e855}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Graphics">
+    <Filter Include="Header Files\Engine">
       <UniqueIdentifier>{12036f92-a916-4e5c-8a54-12ae60c78bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{9eaa3455-63c0-40f7-81ac-7565adbe97f2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -43,10 +43,10 @@
       <Filter>Source Files\Shape</Filter>
     </ClCompile>
     <ClCompile Include="Window.cpp">
-      <Filter>Source Files\Graphics</Filter>
+      <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Render.cpp">
-      <Filter>Source Files\Graphics</Filter>
+      <Filter>Source Files\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +72,7 @@
       <Filter>Header Files\Shape</Filter>
     </ClInclude>
     <ClInclude Include="Graphics.h">
-      <Filter>Header Files\Graphics</Filter>
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -9,8 +9,6 @@ void AddObjectToRender(PhysObj* Obj) {
 }
 
 void DrawFrames() {
-    Objects[1]->PerfromTick();
-
     glClear(GL_COLOR_BUFFER_BIT);
 
     glBegin(GL_TRIANGLES);
@@ -27,7 +25,6 @@ void DrawObject(PhysObj* Object) {
 }
 
 void DrawTriangle(Triangle* Tri) {
-
     glVertex2f(Tri->Vertexes[0]->X / Width, Tri->Vertexes[0]->Y / Height);
     //glColor3f(1, 0, 0);
     glVertex2f(Tri->Vertexes[1]->X / Width, Tri->Vertexes[1]->Y / Height);
