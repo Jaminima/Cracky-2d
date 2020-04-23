@@ -2,8 +2,8 @@
 
 int main()
 {
-    Shape* O1 = new Shape(1);
-    Shape* O2 = new Shape(1);
+    PhysObj* O1 = new PhysObj(1);
+    PhysObj* O2 = new PhysObj(1);
 
     Triangle* p = new Triangle();
     Triangle* q = new Triangle();
@@ -19,7 +19,10 @@ int main()
     O1->Triangles[0] = p;
     O2->Triangles[0] = q;
 
-    q = O1->Triangles[1];
+    O1->ShiftShape(0,20);
 
-    Point* P = O1->CollidesWith(O2);
+    while (!O1->CollidesWith(O2)) {
+        O1->ApplyGravity();
+        O1->PerfromTick();
+    }
 }
