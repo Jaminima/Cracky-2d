@@ -17,10 +17,10 @@ void DrawObject(PhysObj* Object) {
 }
 
 void DrawTriangle(Triangle* Tri) {
-    glVertex2f(Tri->Vertexes[0]->X / Width, Tri->Vertexes[0]->Y / Height);
+    glVertex2f(Tri->Vertexes[0]->X / halfWidth, Tri->Vertexes[0]->Y / halfHeight);
     //glColor3f(1, 0, 0);
-    glVertex2f(Tri->Vertexes[1]->X / Width, Tri->Vertexes[1]->Y / Height);
+    glVertex2f(Tri->Vertexes[1]->X / halfWidth, Tri->Vertexes[1]->Y / halfHeight);
     //glColor3f(0, 1, 0);
-    glVertex2f(Tri->Vertexes[2]->X / Width, Tri->Vertexes[2]->Y / Height);
+    glVertex2f(Tri->Vertexes[2]->X / halfWidth, Tri->Vertexes[2]->Y / halfHeight);
     //glColor3f(0, 0, 1);
 }

@@ -23,16 +23,16 @@ int main(int argc, char** argv)
     O1->Triangles[0] = p;
     O2->Triangles[0] = q;
 
+    O1->_gravity = false;
+    O2->Weight = 10;
+
     O1->CalculateCenter();
     O2->CalculateCenter();
 
-    AddObjectToRender(O1);
-    AddObjectToRender(O2);
+    AddGameObject(O1);
+    AddGameObject(O2);
 
     SetupWindow(argc, argv);
 
     while (true) { std::getchar(); }
-
-    /*DrawTriangle(p);
-    DrawTriangle(q);*/
 }

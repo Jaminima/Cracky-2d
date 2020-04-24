@@ -16,7 +16,9 @@ public:
 
 	void ChangeLinearVelocity(Point* Change);
 
-	void PerfromTick();
+	void PerfromNormalTick();
+
+	void PerformCollisionTick(PhysObj* Collision, Point* At);
 
 	PhysObj(unsigned int t_count) : Shape(t_count) { }
 };

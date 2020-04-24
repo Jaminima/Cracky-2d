@@ -16,8 +16,9 @@ void SetupWindow(int argc, char** argv) {
 }
 
 void Frame() {
+    DoPhysicsTick();
     DrawFrames();
-    glutTimerFunc(FrameDelay, TriggerRedraw, 0);
+    glutTimerFunc(dTime*1000, TriggerRedraw, 0);
 }
 
 void TriggerRedraw(int i) {
