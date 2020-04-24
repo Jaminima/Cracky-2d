@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Craky-2d.cpp" />
+    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Phys.cpp" />
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="Shape.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine.h" />
     <ClInclude Include="GL\freeglut.h" />
     <ClInclude Include="GL\freeglut_ext.h" />
     <ClInclude Include="GL\freeglut_std.h" />

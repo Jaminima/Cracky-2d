@@ -1,11 +1,6 @@
 #pragma once
 #include "Shape.h"
 
-const float Gravity = -9.81;
-const int PhysTps = 20;
-
-const float dTime = 0.05;
-
 class PhysObj : public Shape {
 public:
 	float Weight = 1;

@@ -10,16 +10,21 @@ void SetupWindow(int argc, char** argv) {
     glutCreateWindow("GLUT Test");
 
     glutDisplayFunc(&Frame);
-    glutIdleFunc(&Idle);
+    //glutIdleFunc(&Idle);
 
     glutMainLoop();
 }
 
 void Frame() {
     DrawFrames();
-    
+    glutTimerFunc(FrameDelay, TriggerRedraw, 0);
 }
 
-void Idle() {
+void TriggerRedraw(int i) {
     glutPostRedisplay();
 }
+
+//void Idle() {
+//    glutPostRedisplay();
+//}
+

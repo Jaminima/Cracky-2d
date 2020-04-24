@@ -30,9 +30,9 @@ public:
 
 class Shape {
 public:
-	Point* Center;
-	Triangle** Triangles;
-	int tri_count = 0;
+	Point* Center = 0x0;
+	Triangle** Triangles = 0x0;
+	unsigned int tri_count = 0;
 
 	Shape(unsigned int t_count) {
 		tri_count = t_count;

@@ -1,13 +1,5 @@
 #include "Graphics.h"
 
-PhysObj* Objects[10];
-unsigned int _objects = 0;
-
-void AddObjectToRender(PhysObj* Obj) {
-    Objects[_objects] = Obj;
-    _objects++;
-}
-
 void DrawFrames() {
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -21,7 +13,7 @@ void DrawFrames() {
 }
 
 void DrawObject(PhysObj* Object) {
-    for (int i = 0; i < Object->tri_count; i++) DrawTriangle(Object->Triangles[i]);
+    for (unsigned int i = 0; i < Object->tri_count; i++) DrawTriangle(Object->Triangles[i]);
 }
 
 void DrawTriangle(Triangle* Tri) {
