@@ -8,9 +8,9 @@ int main(int argc, char** argv)
     Triangle* p = new Triangle();
     Triangle* q = new Triangle();
 
-    p->Vertexes[0] = new Point(-200, -200);
+    p->Vertexes[0] = new Point(-200, 70);
     p->Vertexes[1] = new Point(0, -80);
-    p->Vertexes[2] = new Point(200, -200);
+    p->Vertexes[2] = new Point(200, 70);
 
     p->CalculateCenter();
 
@@ -23,8 +23,8 @@ int main(int argc, char** argv)
     O1->Triangles[0] = p;
     O2->Triangles[0] = q;
 
-    O1->_gravity = false;
-    O2->Weight = 10;
+    //O1->_gravity = false;
+    O2->Weight = 1.1;
 
     O1->CalculateCenter();
     O2->CalculateCenter();

@@ -15,7 +15,7 @@ void DoPhysicsTick() {
 
         for (int j = 0; j < _objects; j++) {
             CollidesAt = Objects[i]->CollidesWith(Objects[j]);
-            if (CollidesAt != 0x0 && j!=i) { CollidesWith = Objects[j]; break; }
+            if (CollidesAt != 0x0 && i!=j) { CollidesWith = Objects[j]; break; }
         }
 
         if (CollidesWith == 0x0) Objects[i]->PerfromNormalTick();

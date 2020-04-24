@@ -18,6 +18,8 @@ public:
 
 	void PerfromNormalTick();
 
+	void UpdatePosition();
+
 	void PerformCollisionTick(PhysObj* Collision, Point* At);
 
 	PhysObj(unsigned int t_count) : Shape(t_count) { }
