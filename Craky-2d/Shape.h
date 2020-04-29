@@ -9,6 +9,9 @@ public:
 		this->X = X;
 		this->Y = Y;
 	}
+
+	void Add (Point* P);
+	void Sub (Point* P);
 };
 
 class Triangle {
@@ -20,6 +23,8 @@ public:
 	Point* CollidesWith(Triangle* Other);
 
 	Point* LineCollides(Point* S1, Point* S2, Point* R1, Point* R2);
+
+	void RotatePoints(float deg, Point* sCenter);
 
 	void ShiftPoints(float dX, float dY);
 
@@ -40,6 +45,8 @@ public:
 	}
 
 	void CalculateCenter();
+
+	void RotateShape(float deg);
 
 	void ShiftShape(float dX, float dY);
 

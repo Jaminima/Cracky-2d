@@ -1,4 +1,14 @@
 #include "Shape.h"
+#include <math.h>
+#include <iostream>
+
+void Point::Add(Point* P){
+	X += P->X; Y += P->Y;
+}
+
+void Point::Sub(Point* P) {
+	X -= P->X; Y -= P->Y;
+}
 
 Point* Triangle::LineCollides(Point* S1, Point* S2, Point* R1, Point* R2){
 	float sGrad = (S2->Y - S1->Y) / (S2->X - S1->X);
@@ -29,6 +39,17 @@ void Triangle::ShiftPoints(float dX, float dY) {
 	for (int i = 0; i < 3; i++) {
 		Vertexes[i]->X += dX;
 		Vertexes[i]->Y += dY;
+	}
+}
+
+void Triangle::RotatePoints(float degree, Point* sCenter) {
+	for (int i = 0; i < 3; i++) {
+		Vertexes[i]->Sub(sCenter);
+
+		Vertexes[i]->X = (Vertexes[i]->X * cosh(degree)) - (Vertexes[i]->Y * sinh(degree));
+		Vertexes[i]->Y = (Vertexes[i]->Y * cosh(degree)) + (Vertexes[i]->X * sinh(degree));
+
+		Vertexes[i]->Add(sCenter);
 	}
 }
 

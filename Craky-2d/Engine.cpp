@@ -9,16 +9,15 @@ void AddGameObject(PhysObj* Obj) {
 }
 
 void DoPhysicsTick() {
-    PhysObj* CollidesWith = 0x0;
-    Point* CollidesAt = 0x0;
-    for (int i = 0; i < _objects; i++) {
+    for (unsigned int i = 0; i < _objects; i++) Objects[i]->PerfromNormalTick();
 
-        for (int j = 0; j < _objects; j++) {
-            CollidesAt = Objects[i]->CollidesWith(Objects[j]);
-            if (CollidesAt != 0x0 && i!=j) { CollidesWith = Objects[j]; break; }
-        }
+    Point* CollisionAt;
+    for (unsigned int i = 0, j = 1; i < _objects; i++) {
+        CollisionAt = Objects[i]->CollidesWith(Objects[j]);
 
-        if (CollidesWith == 0x0) Objects[i]->PerfromNormalTick();
-        else Objects[i]->PerformCollisionTick(CollidesWith, CollidesAt);
+        if (CollisionAt != 0x0) Objects[i]->PerformCollisionTick(Objects[j], CollisionAt);
+
+        j++;
+        if (j == _objects) { i++; j = i + 1; }
     }
 }

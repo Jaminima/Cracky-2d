@@ -5,7 +5,7 @@ void DrawFrames() {
 
     glBegin(GL_TRIANGLES);
 
-    for (int i = 0; i < _objects; i++) DrawObject(Objects[i]);
+    for (unsigned int i = 0; i < _objects; i++) DrawObject(Objects[i]);
 
     glEnd();
 

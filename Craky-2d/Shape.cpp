@@ -4,6 +4,10 @@ void Shape::ShiftShape(float dX, float dY) {
 	for (unsigned int i = 0; i < tri_count; i++) Triangles[i]->ShiftPoints(dX, dY);
 }
 
+void Shape::RotateShape(float degree) {
+	for (unsigned int i = 0; i < tri_count; i++) Triangles[i]->RotatePoints(degree,Center);
+}
+
 Point* Shape::CollidesWith(Shape* Other) {
 	Point* P = 0x0;
 	for (unsigned int T = 0, R = 0; R < Other->tri_count && P == 0x0;) {

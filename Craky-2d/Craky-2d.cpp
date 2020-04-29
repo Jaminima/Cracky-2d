@@ -24,7 +24,8 @@ int main(int argc, char** argv)
     O2->Triangles[0] = q;
 
     //O1->_gravity = false;
-    O2->Weight = 1.1;
+    O2->Weight = 2;
+    O2->AngularVelocity = 1;
 
     O1->CalculateCenter();
     O2->CalculateCenter();
